@@ -21,6 +21,6 @@ services:
       - 27017
 
 networks:
-  network1:
+  zapnet:
     name: zapnet
     external: true
