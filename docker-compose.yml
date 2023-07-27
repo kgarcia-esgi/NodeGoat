@@ -3,6 +3,8 @@ version: "3.7"
 services:
   web:
     build: .
+    networks:
+      - zapnet
     environment:
       NODE_ENV:
       MONGODB_URI: mongodb://mongo:27017/nodegoat
@@ -12,6 +14,8 @@ services:
 
   mongo:
     image: mongo:4.4
+    networks:
+      - zapnet
     user: mongodb
     expose:
       - 27017
