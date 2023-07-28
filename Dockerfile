@@ -1,3 +1,8 @@
+FROM node:16-alpine
+COPY . /app
+CMD node /app/app.js
+EXPOSE 3000
+
 FROM node:12-alpine
 ENV WORKDIR /usr/src/app/
 WORKDIR $WORKDIR
